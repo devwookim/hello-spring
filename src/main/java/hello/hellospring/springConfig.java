@@ -1,6 +1,7 @@
 package hello.hellospring;
 //자바 코드로 직접 스프링 빈 등록하기
 
+import hello.hellospring.aop.TimeTraceAop;
 import hello.hellospring.repository.JdbcTemplateMemberRepository;
 import hello.hellospring.repository.JpaMemberRepository;
 import hello.hellospring.repository.MemberRepository;
@@ -28,6 +29,8 @@ public class springConfig {
     public MemberService memberService(){
         return new MemberService(memberRepository);
     }
+
+
 
  /*   @Bean
     public MemberRepository memberRepository()
